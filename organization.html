@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<title>TechEd</title>
+<script>
+  alert( "You can find us at KG 676 Umurenge wa Musezero, Gisozi!");
+</script>
+  
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Times , Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: skyblue;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="topnav">
+  <a class="active" href="file:///media/fuse/drivefs-488209875c1e12045c20a0e4a8355526/root/Jade/Caret.html/Final%20Project/index.html">Home</a>
+  <a href="file:///media/fuse/drivefs-488209875c1e12045c20a0e4a8355526/root/Jade/Caret.html/Final%20Project/Local%20solutions.html">News</a>
+  <a href="file:///media/fuse/drivefs-488209875c1e12045c20a0e4a8355526/root/Jade/Caret.html/Final%20Project/howcanyouhelp.html">Contact</a>
+  <a href="file:///media/fuse/drivefs-488209875c1e12045c20a0e4a8355526/root/Jade/Caret.html/Final%20Project/organization.html">About</a>
+</div>
+
+
+<header>
+  <h2>TechEd</h2>
+</header>
+
+
+  
+  <article>
+    <h1>What do we do?</h1>
+    <p>Tech Ed is a non- profitable organization that works with children and teachers all over in Rwanda to ensure the best education for them with technology.</p>
+    <p> Our organization started in 2020 during the time of covid. What inspired me to start this organization was when I noticed that in so many rural areas in Rwanda. Kids were forced to go without education for a long time because of the fact that all schools were closing.While kids in urban areas could still continue their education with devices. On the local news, I saw that they started putting even classes that you could follow on TV for people who couldn't access computers or iPads. But I kept on thinking: what about the kids who don't have TVs at home? What are they doing now?</p>
+  </article>
+
+<footer>
+  <p> </p>
+</footer>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+<h1> People Who Have Access to Technology in Provinces</h1>
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src= "file:///home/chronos/u-9d301331ee4a069ee21ae02b041dedf3ed1ff1ee/MyFiles/Downloads/Screenshot%202023-10-25%209.02.05%20AM.png style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+<script>
+var xValues = ["Eastern", "Northern", "Western", "Southern", "Kigali"];
+var yValues = [49, 15, 24, 44, 55];
+var barColors = [
+  "#E0FFFF",
+  "#7FFFD4",
+  "#66CDAA",
+  "#00FA9A",
+  "#90EE90"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  
+  }
+});
+
+</script>
+
+</body>
+</html>
+
+
